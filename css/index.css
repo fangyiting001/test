@@ -1,0 +1,233 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: #696969;
+}
+/* 页面的得分 */
+.score {
+    width: 140px;
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+    font-size: 25px;
+    font-weight: 700;
+    padding: 10px;
+    /* border:  1px solid #C3C8CB; */
+    /* background: #c3c8cb; */
+    color: #fff;
+}
+/* 整个页面 */
+#index {
+    position: relative;
+    width: 400px;
+    height: 900px;
+    margin: 30px auto;
+    overflow: hidden;
+    /* border: 1px solid red; */
+}
+#index_all {
+    position: absolute;
+    z-index: -1;
+    top: -900px;
+    width: 400px;
+    height: 1800px;
+    overflow: hidden;
+}
+#index1 {
+    background: url(/img/index.jpg) no-repeat;
+    background-size: 155%;
+    width: 400px;
+    height: 900px;
+    /* border: 1px solid red; */
+}
+#index2 {
+    background: url(/img/index.jpg) no-repeat;
+    background-size: 155%;
+    width: 400px;
+    height: 900px;
+    /* border: 1px solid black; */
+}
+/* 我的飞机 */
+#plane {
+    position: absolute;
+    z-index: 99;
+    bottom: 0;
+    left: 160px;
+    width: 100px;
+    height: 100px;
+    /* border: 1px solid red; */
+    background: url(/img/plane2.png) no-repeat;
+    background-size: 100%;
+    margin-bottom: -15px;
+    margin-left: -20px;
+}
+/* 随机敌机 */
+.air {
+    position: absolute;
+    z-index: 90;
+    width: 50px;
+    height: 50px;
+    top: 0;
+    left: 0;
+    padding-left: 2px;
+    /* border: 1px solid red; */
+}
+.imgbox1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(/img/1.png) no-repeat;
+    width: 60px;
+    height: 60px;
+    /* border: 1px solid red; */
+}
+.imgbox2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(/img/2.png) no-repeat;
+    width: 60px;
+    height: 60px;
+    /* border: 1px solid red; */
+}
+
+.imgbox3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* left: 200px; */
+    background: url(/img/3.png) no-repeat;
+    width: 34px;
+    height: 34px;
+    /* border: 1px solid red; */
+}
+.imgbox4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(/img/4.png) no-repeat;
+    /* left: 350px; */
+    width: 26px;
+    height: 26px;
+    /* border: 1px solid red; */
+}
+/* 子弹 */
+.bullet {
+    position: absolute;
+    z-index: 2;
+    /* bottom: 0; */
+    left: 0;
+    width: 12px;
+    height: 12px;
+    /* border: 1px solid red; */
+    margin-bottom: 20px;
+    background: url(/img/bullet3.png);
+    background-size: contain;
+}
+#btn {
+    position: relative;
+    padding-left: 10px;
+    font-size: 25px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+}
+#img {
+    position: absolute;
+    top: 3px;
+    left: 70px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+/* 结束游戏后的遮罩层 */
+#end {
+    position: absolute;
+    /* display: none; */
+    z-index: 99;
+    top: 38%;
+    width: 80%;
+    height: 200px;
+    margin-left: 40px;
+    background: #fff;
+}
+#endtext {
+    display: block;
+    line-height: 150px;
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: 5px;
+    font-weight: 700;
+}
+#restart, #return, #backindex {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: 3px;
+    text-decoration: none;
+    color: #464547;
+    cursor: pointer;
+}
+#return {
+    left: 140px;
+}
+#backindex {
+    left: 282px;
+}
+/* 最后得分 */
+.lastscore {
+    position: absolute;
+    top: 120px;
+    width: 100%;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* 历史最高分 */
+#history {
+    font-size: 16px;
+    margin-left: 10px;
+    font-weight: 300;
+    color: #696969;
+}
+/* 音乐播放器 */
+#music {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 5px;
+    cursor: pointer;
+}
+#bg {
+    position: absolute;
+    left: 37px;
+    top: 360px;
+    width: 400px;
+    /* height:900px; */
+    margin:30px auto;
+    /* background: url(img/bg.jpg) no-repeat; */
+    background-size: 155%;
+    background-position-x: -90px;
+}
+#bg a {
+    top: 44%;
+    left: 8%;
+    display: block;
+    width: 80%;
+    height: 10vh;
+    padding-left: 10px;
+    letter-spacing: 20px;
+    text-align: center;
+    line-height: 10vh;
+    font-size: 50px;
+    font-weight: 700;
+    color:  #C4C8C9;
+    border: 1px solid slategrey;
+    background: gray;
+    border-radius: 30px;
+    text-decoration: none;
+    cursor: pointer;
+}

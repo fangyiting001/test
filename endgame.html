@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏结束</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            background-color: #696969;
+        }
+        #bg {
+            position: relative;
+            width: 400px;
+            height: 900px;
+            /* border: 1px solid red; */
+            margin: 30px auto;
+            background: url(img/bg.jpg) no-repeat;
+            background-size: 155%;
+            /* background-position-x: -90px; */
+        }
+        #bg #re {
+            position: absolute;
+            top: 46.5%;
+            left: 8%;
+            display: block;
+            width: 80%;
+            height: 8vh;
+            padding-left: 10px;
+            letter-spacing: 20px;
+            text-align: center;
+            line-height: 8vh;
+            font-size: 40px;
+            font-weight: 700;
+            color:  #C4C8C9;
+            border: 1px solid slategrey;
+            background: gray;
+            border-radius: 30px;
+            text-decoration: none;
+            
+        }
+        #endgame {
+            position: absolute;
+            top: 35%;
+            /* left: 60px; */
+            width: 100%;
+            text-align: center;
+            font-size: 50px;
+            letter-spacing: 20px;
+        }
+        #score {
+            position: absolute;
+            top: 40%; 
+            font-size: 35px;
+            font-weight: 700;
+            width: 100%;
+            text-align: center;
+            letter-spacing: 10px;
+        }
+        #end {
+            display: block;
+            position: absolute;
+            top: 58%;
+            width: 100%;
+            text-align: center;
+            letter-spacing: 10px;
+            text-decoration: none;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div id="bg">
+        <!-- <img src="img/bg.jpg"> -->
+        <h1 id="endgame">游戏结束</h1>
+        <a href="index.html" id="re">重新开始</a>
+        <a href="stargame.html" id="end">退出</a>
+    </div>
+</body>
+</html>

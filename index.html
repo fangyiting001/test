@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>飞机大战</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/index.css">
+    <!-- <embed src="music/game_music.mp3" hidden="true"> -->
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <!-- <embed id="Gamemusic" src="video/game_music.mp3" hidden="true" loop="loop"> -->
+    <audio src="video/game_music.mp3" hidden="true" loop="loop" id="Gamemusic"></audio><!-- 背景音乐 -->
+    <audio src="video/bullet.mp3" hidden="true" loop="loop" id="bulletmusic"></audio><!-- 子弹和敌机相碰撞 -->
+    <audio src="video/over.mp3" hidden="true" id="overmusic"></audio><!-- 游戏结束 -->
+    <audio src="video/enemy1_down.mp3" hidden="true" id="kitmusic"></audio><!-- 子弹和敌机相碰撞的声音 -->
+    <div id="index" style="top: 0;">
+        <div id="index_all">
+            <div id="index1">
+            </div>
+            <div id="index2">
+            </div>
+        </div>
+       
+        <div id="bg">
+            <!-- <img src="img/bg.jpg"> -->
+            <a id="stargame">开始游戏</a>
+        </div>
+        <div id="whole">
+            <div class="score" style="display: none;">得分：<span id="num">0</span></div>
+            <div id="btn" style="display: none;">
+                <span id="btntext"></span>
+                <img src="" id="img">
+            </div>
+            <div id="plane" style="bottom: 0;left: 160px; display: none;">
+            </div>
+        </div>
+        <div id="end" style="display: none;">
+            <spna id="endtext">GAME OVER</spna>
+            <p class="lastscore">得分：<span id="lastscore">0</span>
+                <a id="history">历史最高分<span id="historyscore">0</span></a>
+            </p>
+            <a id="restart">重新开始</a>
+            <a href="endgame.html" id="return">退出游戏</a>
+            <a href="stargame.html" id="backindex">首页</a>
+        </div>
+        <div id="music">
+            <img src="" id="imgmusic">
+        </div>
+    </div>
+</body>
+</html>

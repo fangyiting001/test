@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用键盘上下左右控制</title>
+    <style>
+        body{
+            width: 0;
+            height: 0;
+            /* margin: 0 500px; */
+        }
+        #bg{
+            position: relative;
+            margin-left: 500px;
+            /* width: 360px;
+            height: 360px;
+            border: 2px solid slategrey; */
+        }
+        .bg {
+            width: 360px;
+            height: 360px;                 
+        }
+        #plane {
+            position: absolute;
+            /* top: 0; */
+            left: 165px;
+            bottom: 0;
+        }
+        #plane-icon {
+            width: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="bg">
+        <img class='bg' src="img/bg-plane.jpg" alt="">
+        <div id="plane" style="bottom: 0; left: 165px">
+            <img id="plane-icon" src="img/plane.png" alt="" >
+        </div>
+    </div>
+    <script>
+
+        let up = false;
+        let down = false;
+        let left = false;
+        let right = false;
+        document.onkeydown = function (e) {
+            // console.log(e.keyCode);//上38，下40， 左37，右39
+            let keyCode = e.keyCode;
+            // console.log(Number(document.getElementById('plane-icon').style.bottom.replace('px', '')));
+            let updown = Number(document.getElementById('plane').style.bottom.replace('px', ''));
+            let leftright = Number(document.getElementById('plane').style.left.replace('px', ''));
+            if (keyCode == 38) {//向上
+                up = true;
+                Up(updown);//实参
+            }
+            if (keyCode == 40) {//向下
+                down = true;
+                Down(updown);
+            }
+            if (keyCode == 37) {//左
+                left = true;
+                Left(leftright);
+            }
+            if (keyCode == 39) {//右
+                right = true;
+                Right(leftright);
+                
+            }
+
+            
+            document.onkeyup = function (e) {//先做下和左键盘弹起来的事件
+                if (e.keyCode == 40) {//下
+                    down = false;
+                }
+                if (e.keyCode == 37) {//左
+                    left = false;
+                }
+                if (e.keyCode == 39) {//右
+                    right = false;
+                }
+                if (e.keyCode == 38) {//上
+                    up = false;
+                }
+            }
+            //上右
+            if (up == true && right == true) {
+                Up(updown);
+                Right(leftright);
+            }
+            // console.log(right, up);
+            
+            //上左
+            if (up == true && left == true) {
+                Up(updown);
+                Left(leftright);
+            }
+            // console.log(up, left, right);
+            
+            //下左
+            if (down == true && left == true) {//下左
+                Down(updown);
+                Left(leftright);
+            }
+
+            //右下
+            // console.log(down, left, right);
+            if (down == true && right == true) {//下右
+                Down(updown);
+                Right(leftright);
+            }
+            
+        }
+
+        //封装函数
+        function Up (x) {//上，，，传参
+            x += 10;
+                if (x > 330) {
+                    return;
+                }
+                document.getElementById('plane').style.bottom = x + "px";
+        }
+
+        function Down (x) {//下
+            x -= 10;
+                if (x < 0) {
+                    return;
+                }
+                document.getElementById('plane').style.bottom = x + "px";
+        }
+
+        function Left (y) {
+            y -= 10;
+                if (y < 0) {
+                    return;
+                }
+                document.getElementById('plane').style.left = y + "px";
+        }
+
+        function Right (y) {
+            y += 10;
+                if (y > 330) {
+                    return;
+                }
+                document.getElementById('plane').style.left = y + "px";
+        }
+
+
+
+
+    </script>
+</body>
+</html>
